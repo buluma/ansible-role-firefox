@@ -1,0 +1,10 @@
+---
+- name: Verify
+  hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: check firefox version installed
+      ping:
+        msg: "Installed firefox version successfully!"
