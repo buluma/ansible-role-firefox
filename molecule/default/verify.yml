@@ -6,5 +6,5 @@
 
   tasks:
     - name: check firefox version installed
-      debug:
+      ansible.builtin.debug:
         msg: "Installed firefox version successfully!"

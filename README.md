@@ -1,6 +1,6 @@
 # [firefox](#firefox)
 
-Firefox
+Firefox Installation.
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
@@ -17,6 +17,18 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
   gather_facts: true
   roles:
     - role: buluma.firefox
+```
+
+The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+```yaml
+---
+- name: prepare
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: buluma.bootstrap
 ```
 
 
@@ -39,6 +51,13 @@ firefox_version: "99.0.1"
 
 - pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-firefox/blob/main/requirements.txt).
 
+## [Status of used roles](#status-of-requirements)
+
+The following roles are used to prepare a system. You can prepare your system in another way.
+
+| Requirement | GitHub | GitLab |
+|-------------|--------|--------|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
 
 ## [Context](#context)
 
@@ -77,4 +96,4 @@ license (Apache-2.0)
 
 ## [Author Information](#author-information)
 
-[030](https://buluma.github.io/)
+[Michael Buluma](https://buluma.github.io/)
