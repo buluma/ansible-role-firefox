@@ -2,7 +2,7 @@
 dependencies: []
 
 galaxy_info:
-  author: "030"
+  author: Michael Buluma
   role_name: firefox
   namespace: buluma
   description: Firefox Installation.

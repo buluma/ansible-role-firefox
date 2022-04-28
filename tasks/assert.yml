@@ -1,0 +1,6 @@
+- name: test if openvpn_role is set correctly
+  ansible.builtin.assert:
+    that:
+      - firefox_role is defined
+      - firefox_role is string
+    quiet: yes
