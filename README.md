@@ -4,7 +4,7 @@ Firefox Installation.
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-firefox/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-firefox/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-firefox/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-firefox)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/firefox)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/firefox)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-firefox.svg)](https://github.com/buluma/ansible-role-firefox/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-firefox.svg)](https://github.com/buluma/ansible-role-firefox/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-firefox.svg)](https://github.com/buluma/ansible-role-firefox/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-firefox/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-firefox/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-firefox/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-firefox)|[![quality](https://img.shields.io/ansible/quality/59006)](https://galaxy.ansible.com/buluma/firefox)|[![downloads](https://img.shields.io/ansible/role/d/59006)](https://galaxy.ansible.com/buluma/firefox)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-firefox.svg)](https://github.com/buluma/ansible-role-firefox/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-firefox.svg)](https://github.com/buluma/ansible-role-firefox/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-firefox.svg)](https://github.com/buluma/ansible-role-firefox/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -29,6 +29,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 
   roles:
     - role: buluma.bootstrap
+    - role: buluma.ca_certificates
 ```
 
 
@@ -73,7 +74,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |el|7|
-|ubuntu|bionic|
+|ubuntu|all|
+|debian|all|
+|fedora|all|
 
 The minimum version of Ansible required is 2.1, tests have been done to:
 
