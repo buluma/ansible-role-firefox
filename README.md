@@ -37,9 +37,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 The default values for the variables are set in `defaults/main.yml`:
 ```yaml
 ---
-# https://github.com/030/ansible-firefox
-# https://ftp.mozilla.org/pub/firefox/releases/99.0.1/SHA512SUMS
-firefox_checksum: sha512:a122bacbe2cc48301f696696e8854d190e0ce9ce72b39e9df90846214c536730a7190a858295f56e836b263bdc2e4e3041cb3bfad8d7cf483c50478c634c14f5  # yamllint disable-line rule:line-length
+firefox_checksum: sha512:a122bacbe2cc48301f696696e8854d190e0ce9ce72b39e9df90846214c536730a7190a858295f56e836b263bdc2e4e3041cb3bfad8d7cf483c50478c634c14f5
 firefox_desktop_icon: false
 firefox_home: /opt/firefox-{{ firefox_version }}
 firefox_image_path: "firefox/browser/chrome/icons/default/default128.png"
@@ -58,6 +56,7 @@ The following roles are used to prepare a system. You can prepare your system in
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
 |[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
+|[buluma.ca_certificates](https://galaxy.ansible.com/buluma/ca_certificates)|[![Build Status GitHub](https://github.com/buluma/ansible-role-ca_certificates/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-ca_certificates/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-ca_certificates/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-ca_certificates)|
 
 ## [Context](#context)
 

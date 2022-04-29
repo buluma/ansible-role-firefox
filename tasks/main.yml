@@ -1,6 +1,6 @@
 ---
 - name: include distribution specific variables
-  include_vars: "{{ lookup('first_found', params) }}"
+  ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
   vars:
     params:
       files:
@@ -15,6 +15,7 @@
   ansible.builtin.get_url:
     url: "{{ firefox_url }}"
     dest: /tmp/firefox-{{ firefox_version }}.tar.bz2
+    mode: 0755
     checksum: "{{ firefox_checksum }}"
 
 - block:
