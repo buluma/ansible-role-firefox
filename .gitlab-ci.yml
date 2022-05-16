@@ -1,5 +1,5 @@
 ---
-image: "buluma/github-action-molecule:4.0.6"
+image: "buluma/github-action-molecule:4.0.7"
 
 services:
   - docker:dind
@@ -24,12 +24,16 @@ molecule:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
+      - image: "docker-ubuntu-systemd"
+        tag: "jammy"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
         tag: "bookworm"
       - image: "fedora-systemd"
         tag: "34"
+      - image: "fedora-systemd"
+        tag: "35"
       - image: "fedora-systemd"
         tag: "latest"
 
@@ -51,12 +55,16 @@ testing:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
+      - image: "docker-ubuntu-systemd"
+        tag: "jammy"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
         tag: "bookworm"
       - image: "fedora-systemd"
         tag: "34"
+      - image: "fedora-systemd"
+        tag: "35"
       - image: "fedora-systemd"
         tag: "latest"
 
@@ -82,12 +90,16 @@ role_testing:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
+      - image: "docker-ubuntu-systemd"
+        tag: "jammy"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
         tag: "bookworm"
       - image: "fedora-systemd"
         tag: "34"
+      - image: "fedora-systemd"
+        tag: "35"
       - image: "fedora-systemd"
         tag: "latest"
 

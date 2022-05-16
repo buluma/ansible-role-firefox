@@ -1,7 +1,7 @@
 ---
-- name: test if openvpn_role is set correctly
+- name: test if firefox_desktop_icon is set correctly
   ansible.builtin.assert:
     that:
-      - firefox_role is defined
-      - firefox_role is string
+      - firefox_desktop_icon is defined
+      - firefox_desktop_icon is bool
     quiet: yes

@@ -10,6 +10,5 @@ exclude_paths:
   - ./.tox
   - ./.cache
 
-warn_list:  # or 'skip_list' to silence them completely
-  - experimental  # all rules tagged as experimental
-  - fqcn-builtins  # Use FQCN for builtin actions.
+skip_list:
+  - unnamed-task  # All tasks should be named.
