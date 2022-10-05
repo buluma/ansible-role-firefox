@@ -1,5 +1,5 @@
 ---
-image: "buluma/github-action-molecule:4.0.7"
+image: "buluma/github-action-molecule:4.0.9"
 
 services:
   - docker:dind
@@ -29,7 +29,7 @@ molecule:
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
-        tag: "bookworm"
+        tag: "buster"
       - image: "fedora-systemd"
         tag: "34"
       - image: "fedora-systemd"
@@ -60,7 +60,7 @@ testing:
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
-        tag: "bookworm"
+        tag: "buster"
       - image: "fedora-systemd"
         tag: "34"
       - image: "fedora-systemd"
@@ -95,7 +95,7 @@ role_testing:
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
-        tag: "bookworm"
+        tag: "buster"
       - image: "fedora-systemd"
         tag: "34"
       - image: "fedora-systemd"
