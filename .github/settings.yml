@@ -5,4 +5,4 @@
 repository:
   description: Firefox Installation.
   homepage: https://buluma.github.io/
-  topics: firefox, mozilla, webbrowser, ansible, molecule, tox, playbook, hacktoberfest
+  topics: firefox, mozilla, webbrowser, ansible, molecule, tox, playbook
