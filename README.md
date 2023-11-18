@@ -1,4 +1,4 @@
-# [firefox](#firefox)
+# [Ansible role firefox](#firefox)
 
 Firefox Installation.
 
