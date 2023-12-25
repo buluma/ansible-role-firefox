@@ -19,6 +19,7 @@
     checksum: "{{ firefox_checksum }}"
 
 - name: Install firefox
+  become: true
   block:
     - name: Remove the firefox package
       ansible.builtin.package:
@@ -48,7 +49,6 @@
         src: "{{ firefox_bin }}"
         dest: /usr/bin/firefox
         state: link
-  become: true
 
 - name: Create desktop icon
   ansible.builtin.template:
