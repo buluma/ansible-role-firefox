@@ -18,7 +18,8 @@
     mode: 0755
     checksum: "{{ firefox_checksum }}"
 
-- block:
+- name: Install firefox
+  block:
     - name: Remove the firefox package
       ansible.builtin.package:
         name: firefox
