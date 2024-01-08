@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0](https://github.com/buluma/ansible-role-firefox/tree/0.2.0) (2024-01-02)
+
+[Full Changelog](https://github.com/buluma/ansible-role-firefox/compare/0.1.3...0.2.0)
+
+**Merged pull requests:**
+
+- Bump actions/checkout from 3 to 4 [\#9](https://github.com/buluma/ansible-role-firefox/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [0.1.3](https://github.com/buluma/ansible-role-firefox/tree/0.1.3) (2023-12-25)
 
 [Full Changelog](https://github.com/buluma/ansible-role-firefox/compare/0.1.2...0.1.3)
