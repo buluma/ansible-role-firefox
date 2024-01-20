@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-firefox/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-firefox/compare/0.2.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/molecule-action from 6.0.0 to 6.0.1 [\#13](https://github.com/buluma/ansible-role-firefox/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [0.2.0](https://github.com/buluma/ansible-role-firefox/tree/0.2.0) (2024-01-02)
 
 [Full Changelog](https://github.com/buluma/ansible-role-firefox/compare/0.1.3...0.2.0)
