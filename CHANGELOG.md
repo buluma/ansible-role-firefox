@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-firefox/tree/HEAD)
+## [0.3.0](https://github.com/buluma/ansible-role-firefox/tree/0.3.0) (2024-01-20)
 
-[Full Changelog](https://github.com/buluma/ansible-role-firefox/compare/0.2.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-firefox/compare/0.2.0...0.3.0)
 
 **Merged pull requests:**
 
