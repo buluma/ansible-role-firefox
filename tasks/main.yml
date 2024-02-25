@@ -21,7 +21,7 @@
 - name: Install firefox
   become: true
   block:
-    - name: Remove the firefox package
+    - name: Remove previous firefox package
       ansible.builtin.package:
         name: firefox
         state: absent
