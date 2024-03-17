@@ -42,6 +42,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
+# https://github.com/030/ansible-firefox
 # https://ftp.mozilla.org/pub/firefox/releases/123.0/SHA512SUMS
 firefox_checksum: sha512:9ab94d078ef9178e2b12ab8aa114eb6f84ea7c9b3055e552156764019a13aeb39fff91f9b402156c5c12b6053df14228bbffffe81199dc6ef967d21fb5a962ba  # yamllint disable-line rule:line-length
 firefox_desktop_icon: false
@@ -102,3 +103,4 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [Shadow Walker](https://buluma.github.io/)
+
