@@ -47,13 +47,17 @@ jobs:
       matrix:
         config:
           - image: "enterpriselinux"
-            tag: "7"
+            tag: "8"
           - image: "docker-ubuntu-systemd"
             tag: "latest"
           - image: "docker-ubuntu-systemd"
             tag: "focal"
           - image: "docker-ubuntu-systemd"
             tag: "bionic"
+          - image: "docker-ubuntu-systemd"
+            tag: "lunar"
+          - image: "docker-ubuntu-systemd"
+            tag: "noble"
           - image: "debian-systemd"
             tag: "latest"
           - image: "debian-systemd"
@@ -85,7 +89,7 @@ jobs:
       - uses: "actions/checkout@master"
       - name: Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v1
+        uses: dependabot/fetch-metadata@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Approve a PR
