@@ -3,5 +3,12 @@
   ansible.builtin.assert:
     that:
       - firefox_desktop_icon is defined
-      - firefox_desktop_icon is bool
-    quiet: yes
+      - firefox_desktop_icon is boolean
+    quiet: true
+
+# TODO: Check version is in specific format 123.0.0
+- name: assert | Test if firefox_version is set correctly
+  ansible.builtin.assert:
+    that:
+      - firefox_version is defined
+    quiet: true

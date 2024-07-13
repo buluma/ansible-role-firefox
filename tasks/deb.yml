@@ -2,12 +2,12 @@
 # Based on instructions at https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions
 
 - name: get gpg key
-  get_url:
+  ansible.builtin.get_url:
     url: https://packages.mozilla.org/apt/repo-signing-key.gpg
     dest: /etc/apt/keyrings/packages.mozilla.org.asc
 
 - name: verify key fingerprint
-  shell:
+  ansible.builtin.shell:
     cmd: gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); print $0}'
   register: gpg
 - assert:
@@ -15,12 +15,12 @@
     fail_msg: Mozilla repo signing key fingerprint is not what we expect, cannot safely install firefox
 
 - name: add apt repository
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main
     update_cache: yes
 
 - name: prioritize mozilla repo
-  copy:
+  ansible.builtin.copy:
     dest: /etc/apt/preferences.d/mozilla
     content: |
       Package: *
@@ -28,5 +28,5 @@
       Pin-Priority: 1000
 
 - name: install firefox
-  apt:
+  ansible.builtin.apt:
     name: firefox

@@ -37,22 +37,22 @@ Now you can start to edit on your laptop.
 
 ### [4. Optionally: test your changes](#4-optionally-test-your-changes)
 
-Install [molecule](https://molecule.readthedocs.io/) and [Tox](https://tox.readthedocs.io/):
+Install [molecule](https://molecule.readthedocs.io/en/stable/) and [Tox](https://tox.readthedocs.io/):
 
 ```shell
-pip install molecule tox ansible-lint docker "molecule-plugins[docker]"
+pip install molecule tox ansible-lint docker
 ```
 
 And run `molecule test`. If you want to test a specific distribution, set `image` and optionally `tag`:
 
 ```shell
-image=enterpriselinux tag=7 molecule test
+image=centos tag=7 molecule test
 ```
 
-Once it starts to work, you can test multiple versions of Ansible:
+Once it start to work, you can test multiple version of Ansible:
 
 ```shell
-image=enterpriselinux tag=7 tox
+image=centos tag=7 tox
 ```
 
 ### [5. Optionally: Regenerate all dynamic content](#5-optionally-regenerate-all-dynamic-content)
@@ -72,4 +72,3 @@ In the comment-box, you can [refer to the issue number](https://help.github.com/
 Now I'll get a message that you've added some code. Thank you, really.
 
 CI starts to test your changes once pull request is reviewed. You can follow the progress on GitHub.
-

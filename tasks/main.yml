@@ -1,4 +1,10 @@
 ---
+- name: Import assert.yml
+  ansible.builtin.import_tasks:
+    file: assert.yml
+  run_once: true
+  delegate_to: localhost
+
 - name: Include distribution specific variables
   ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
   vars:
@@ -11,10 +17,14 @@
       paths:
         - vars
 
-- include_tasks: tarball.yml
+- name: Install via tarball
+  ansible.builtin.import_tasks:
+    file: tarball.yml
   when:
     - ansible_facts.os_family != "Debian"
 
-- include_tasks: deb.yml
+- name: Install via deb
+  ansible.builtin.import_tasks:
+    file: deb.yml
   when:
     - ansible_facts.os_family == "Debian"
