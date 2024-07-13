@@ -7,7 +7,6 @@
 **Merged pull requests:**
 
 - Bump dependabot/fetch-metadata from 1 to 2 [\#19](https://github.com/buluma/ansible-role-firefox/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#18](https://github.com/buluma/ansible-role-firefox/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#16](https://github.com/buluma/ansible-role-firefox/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#15](https://github.com/buluma/ansible-role-firefox/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
 
@@ -41,6 +40,7 @@
 
 **Merged pull requests:**
 
+- Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#18](https://github.com/buluma/ansible-role-firefox/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/molecule-action from 4.0.6 to 4.0.7 [\#2](https://github.com/buluma/ansible-role-firefox/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [0.1.1](https://github.com/buluma/ansible-role-firefox/tree/0.1.1) (2022-04-29)
