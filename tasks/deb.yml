@@ -1,32 +1,38 @@
 ---
 # Based on instructions at https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions
 
-- name: get gpg key
+- name: deb | Get gpg key
   ansible.builtin.get_url:
     url: https://packages.mozilla.org/apt/repo-signing-key.gpg
     dest: /etc/apt/keyrings/packages.mozilla.org.asc
+    mode: '0644'
 
-- name: verify key fingerprint
-  ansible.builtin.shell:
-    cmd: gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); print $0}'
+- name: deb | Verify key fingerprint
+  ansible.builtin.shell: |
+    set -o pipefail
+    gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); print $0}'
   register: gpg
-- assert:
+  changed_when: false
+
+- name: deb | Assert signing key
+  ansible.builtin.assert:
     that: gpg.stdout == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3"
     fail_msg: Mozilla repo signing key fingerprint is not what we expect, cannot safely install firefox
 
-- name: add apt repository
+- name: deb | Add apt repository
   ansible.builtin.apt_repository:
     repo: deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main
-    update_cache: yes
+    update_cache: true
 
-- name: prioritize mozilla repo
+- name: deb | Prioritize mozilla repo
   ansible.builtin.copy:
     dest: /etc/apt/preferences.d/mozilla
     content: |
       Package: *
       Pin: origin packages.mozilla.org
       Pin-Priority: 1000
+    mode: '0644'
 
-- name: install firefox
+- name: deb | Install firefox
   ansible.builtin.apt:
     name: firefox
