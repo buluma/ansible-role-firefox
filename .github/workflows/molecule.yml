@@ -12,7 +12,6 @@ on:
       - main
       - testing
       - dependabot/**
-      # - renovate/**
     paths-ignore:
       - '**/README.md'
       - '**/CHANGELOG.md'
@@ -21,8 +20,7 @@ on:
   pull_request:
   pull_request_target:
   schedule:
-    # - cron: '11 6 6 * *'
-    - cron: '11 6 * * *'
+    - cron: '11 6 6/6 * *'
 
   workflow_dispatch:
 
@@ -36,37 +34,39 @@ jobs:
   lint:
     runs-on: ubuntu-20.04
     steps:
-      - name: checkout
+      - name: Checkout Role
         uses: actions/checkout@v4
-      - name: ansible-lint
-        uses: ansible-community/ansible-lint-action@main
+      - name: Run Ansible-lint
+        uses: ansible/ansible-lint@v24.7.0
   test:
+    needs:
+      - lint
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
         config:
           - image: "enterpriselinux"
-            tag: "8"
-          - image: "docker-ubuntu-systemd"
-            tag: "latest"
-          - image: "docker-ubuntu-systemd"
+            tag: "7"
+          - image: "docker-molecule-images"
+            tag: "ubuntu_latest"
+          - image: "docker-molecule-images"
             tag: "focal"
-          - image: "docker-ubuntu-systemd"
-            tag: "bionic"
-          - image: "docker-ubuntu-systemd"
+          - image: "docker-molecule-images"
+            tag: "jammy"
+          - image: "docker-molecule-images"
             tag: "lunar"
-          - image: "docker-ubuntu-systemd"
+          - image: "docker-molecule-images"
             tag: "noble"
-          - image: "debian-systemd"
-            tag: "latest"
-          - image: "debian-systemd"
+          - image: "docker-molecule-images"
+            tag: "buster"
+          - image: "docker-molecule-images"
             tag: "bullseye"
-          - image: "fedora-systemd"
-            tag: "38"
-          - image: "fedora-systemd"
-            tag: "latest"
-          - image: "fedora-systemd"
+          - image: "docker-molecule-images"
+            tag: "39"
+          - image: "docker-molecule-images"
+            tag: "40"
+          - image: "docker-molecule-images"
             tag: "rawhide"
     steps:
       - name: Checkout Role
@@ -74,10 +74,12 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: Running Molecule Test
-        uses: buluma/molecule-action@v24.2.0
+        uses: buluma/molecule-action@v24.6.17
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
+      - name: Running Role Test
+        run: ansible-galaxy role import --api-key ${{ secrets.galaxy_api_key }} buluma ${{ github.event.repository.name }}
 
   dependabot:
     needs:
