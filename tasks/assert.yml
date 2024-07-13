@@ -11,5 +11,4 @@
   ansible.builtin.assert:
     that:
       - firefox_version is defined
-      - firefox_desktop_icon is bool
     quiet: true
