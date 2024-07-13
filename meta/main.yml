@@ -22,4 +22,5 @@ galaxy_info:
     - firefox
     - mozilla
     - webbrowser
+    - system
 dependencies: []
