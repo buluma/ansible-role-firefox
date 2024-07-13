@@ -1,6 +1,6 @@
 ---
 # Based on instructions at https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions
-- name: Ensure the directory to store APT repository keys exists
+- name: deb | Ensure the directory to store APT repository keys exists
   ansible.builtin.file:
     path: /etc/apt/keyrings
     state: directory

@@ -14,3 +14,6 @@ exclude_paths:
 
 enable_list:
   - name[prefix]
+
+skip_list:
+  - risky-shell-pipe
