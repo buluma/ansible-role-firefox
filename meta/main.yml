@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: buluma
   role_name: firefox
@@ -5,9 +6,9 @@ galaxy_info:
   license: Apache-2.0
   min_ansible_version: '2.12'
   platforms:
-  - name: EL
-    versions:
-    - all
+    - name: EL
+      versions:
+        - all
   - name: Ubuntu
     versions:
     - all
@@ -18,7 +19,7 @@ galaxy_info:
     versions:
     - all
   galaxy_tags:
-  - firefox
+    - firefox
   - mozilla
   - webbrowser
   - system
