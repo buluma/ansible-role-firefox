@@ -1,7 +1,7 @@
 ---
 # https://github.com/030/ansible-firefox
 # https://ftp.mozilla.org/pub/firefox/releases/123.0/SHA512SUMS
-firefox_checksum: sha512:9ab94d078ef9178e2b12ab8aa114eb6f84ea7c9b3055e552156764019a13aeb39fff91f9b402156c5c12b6053df14228bbffffe81199dc6ef967d21fb5a962ba  # yamllint disable-line rule:line-length
+firefox_checksum: "sha512:9ab94d078ef9178e2b12ab8aa114eb6f84ea7c9b3055e552156764019a13aeb39fff91f9b402156c5c12b6053df14228bbffffe81199dc6ef967d21fb5a962ba"
 firefox_desktop_icon: false
 firefox_home: /opt/firefox-{{ firefox_version }}
 firefox_image_path: "firefox/browser/chrome/icons/default/default128.png"
