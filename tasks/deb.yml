@@ -14,7 +14,10 @@
 
 - name: deb | Verify key fingerprint
   ansible.builtin.shell: |
-    bash -c 'set -o pipefail; gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk "/pub/{getline; gsub(/^ +| +$/,\" \"); print $0}"'
+    set -o pipefail
+    gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/," "); print $0}'
+  args:
+    executable: /bin/bash
   register: gpg
   changed_when: false
 
