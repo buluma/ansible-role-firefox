@@ -4,13 +4,13 @@
   ansible.builtin.file:
     path: /etc/apt/keyrings
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: deb | Get gpg key
   ansible.builtin.get_url:
-    url: 'https://packages.mozilla.org/apt/repo-signing-key.gpg'
+    url: "https://packages.mozilla.org/apt/repo-signing-key.gpg"
     dest: /etc/apt/keyrings/packages.mozilla.org.asc
-    mode: '0644'
+    mode: "0644"
 
 - name: deb | Verify key fingerprint
   ansible.builtin.shell: |
@@ -35,7 +35,7 @@
       Package: *
       Pin: origin packages.mozilla.org
       Pin-Priority: 1000
-    mode: '0644'
+    mode: "0644"
 
 - name: deb | Install firefox
   ansible.builtin.apt:
