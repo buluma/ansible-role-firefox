@@ -4,4 +4,4 @@
   become: true
   gather_facts: true
   roles:
-    - role: ansible-role-firefox
+    - role: buluma.firefox
