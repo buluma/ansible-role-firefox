@@ -1,7 +1,7 @@
 ---
-- name: Converge
-  hosts: all
-  become: true
-  gather_facts: true
-  roles:
-    - role: buluma.firefox
+  - name: Converge
+    hosts: all
+    become: true
+    gather_facts: true
+    roles:
+      - role: buluma.firefox
