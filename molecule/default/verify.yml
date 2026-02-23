@@ -1,10 +1,10 @@
 ---
-  - name: Verify
-    hosts: all
-    become: true
-    gather_facts: true
+- name: Verify
+  hosts: all
+  become: true
+  gather_facts: true
 
-    tasks:
-      - name: Check firefox version installed
-        ansible.builtin.debug:
-          msg: "Installed firefox version successfully!"
+  tasks:
+  - name: Check firefox version installed
+    ansible.builtin.debug:
+      msg: "Installed firefox version successfully!"
