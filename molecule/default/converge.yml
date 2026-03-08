@@ -4,4 +4,4 @@
   become: true
   gather_facts: true
   roles:
-  - role: buluma.firefox
+    - role: buluma.firefox
