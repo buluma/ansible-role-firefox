@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-firefox/tree/HEAD)
+## [26.6.0](https://github.com/buluma/ansible-role-firefox/tree/26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-firefox/compare/0.3.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-firefox/compare/0.3.0...26.6.0)
 
 **Merged pull requests:**
 
@@ -13,7 +13,6 @@
 - Bump release-drafter/release-drafter from 5 to 6 [\#17](https://github.com/buluma/ansible-role-firefox/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#16](https://github.com/buluma/ansible-role-firefox/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#15](https://github.com/buluma/ansible-role-firefox/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Install from deb packages on Debian-family systems [\#14](https://github.com/buluma/ansible-role-firefox/pull/14) ([caboteria](https://github.com/caboteria))
 
 ## [0.3.0](https://github.com/buluma/ansible-role-firefox/tree/0.3.0) (2024-01-20)
 
