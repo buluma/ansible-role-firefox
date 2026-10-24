@@ -2,7 +2,7 @@
 - name: tarball | Download firefox package
   ansible.builtin.get_url:
     url: "{{ firefox_url }}"
-    dest: /tmp/firefox-{{ firefox_version }}.tar.bz2
+    dest: /tmp/firefox-{{ firefox_version }}.tar.xz
     mode: "0755"
     checksum: "{{ firefox_checksum }}"
 
